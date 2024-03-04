@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.form-area{
+    
+    width: 300px;
+    max-height: 500px;
+    padding: 0;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.form-area h1{
+    font-size: 28px;
+    text-align: center;
+    padding-top: 20px;
+    margin: 15px;
+}
+.form-area .input-area{
+    display: flex;
+    margin: 10px 0 20px 0;
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.form-area .input-area input{
+    width: 85%;
+    border-radius: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(187, 187, 187);
+    padding: 15px ;
+    cursor: text;
+
+}
+
+.form-area button{
+    margin: auto auto;
+    display: block;
+    padding: 7.5px 40px;
+    border-radius: 10px;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    cursor: pointer;
+}
+
+.form-area button:hover{
+    background-color: rgb(185, 185, 185);
+    color: black;
+}
+
+.form-area form label{
+    padding-left: 25px;
+}
+.form-area .cadastro-login p{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.form-area small{
+    padding-top: 0;
+    margin-top: 0;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+}

@@ -1,0 +1,38 @@
+{% extends 'plataforma/base.html' %}
+
+{% block content %}
+    
+<div class="post">
+    <!--Exibe a imagem do perfil, nome de usuario, e data de publicaçao da postagem-->
+    <div class="post-profile-info">
+        {% if post.author.user_profile.profile_image %}
+            <img src="{{post.author.user_profile.profile_image.url}}">
+        {% else %}
+            <img src="/media/no_user.png">
+        {% endif %}
+        
+    
+        <div class="author-date">
+            {% if post.author.user_profile.nickname %}
+                <h3>{{post.author.user_profile.nickname}}</h3>
+            {% else %}
+                <h3>anonymous user</h3>
+            {% endif %}
+            
+            <small>{{post.published_date}}</small>
+        </div>
+    </div>  
+    
+    <div class="post-text-image">
+        <p><a href="{% url 'detail_post' id=post.id %}" >{{post.text}}</a></p>
+    
+        {% if post.image %}
+            <div class="image-container">
+                <a href="{{post.image.url}}"><img src="{{post.image.url}}" class="centered-image"></a>
+            </div>
+        {% endif %}   
+    </div>
+    
+</div>
+
+{% endblock %}

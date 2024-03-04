@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles-form.css' %}">
+    <title>Bacefook | Cadastro</title>
+</head>
+<body>
+   
+    <div class="form-area">
+         <h1>Cadastro de Usuario</h1>
+        <form   action="{% url 'cadastro' %}" method="POST">{% csrf_token %}
+            
+            <label for="input-user" >Nome de usuário: </label>
+            <div class="input-area">
+                <input id="input-user" type="text" placeholder="Insira o nome de usuário" name="username">
+            </div>
+            
+            <label for="input-email">Endereço de E-mail</label>
+            <div class="input-area">
+                <input id="input-email" type="email"  placeholder="Insira seu imail" name="email">
+            </div>
+            <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu e-mail com ninguém.</small>
+
+            <label for="input-senha" >Senha: </label>
+            <div class="input-area">
+                <input id="input-senha" type="password" placeholder="Insira a senha" name="password">
+            </div>
+                
+            <button type="submit">Cadastrar</button>
+
+        </form>
+        <div class="cadastro-login">
+            <p>Já possui uma conta?<a href="/user/login/">Faça Login!</a></p>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>
